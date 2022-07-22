@@ -8,8 +8,8 @@ WORKDIR /usr/src/app
 RUN apt-get -qy update && apt-get -qy install openssl
 RUN yarn install
 RUN yarn add -D express
-RUN yarn add -D @prisma/client
-RUN prisma generate
+RUN yarn add -D prisma
+RUN npx prisma generate
 
 COPY . .
 
