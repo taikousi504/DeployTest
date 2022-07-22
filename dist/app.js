@@ -15,14 +15,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const client_1 = require("@prisma/client");
 const app = (0, express_1.default)();
-const cors = require('cors');
+//const cors = require('cors');
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
-app.use(cors({
-    origin: 'http://127.0.0.1:3001',
-    credentials: true,
-    optionsSuccessStatus: 200
-}));
+// app.use(cors({
+//     origin: 'http://127.0.0.1:3001',
+//     credentials: true,
+//     optionsSuccessStatus: 200
+// }))
 const prisma = new client_1.PrismaClient();
 app.listen(3000, () => {
     console.log(`Start on port 3000.`);
