@@ -9,7 +9,6 @@ RUN apt-get -qy update && apt-get -qy install openssl
 RUN yarn install
 RUN yarn add express
 RUN yarn global add prisma
-RUN prisma
 RUN yarn add @prisma/client
 
 COPY . .
