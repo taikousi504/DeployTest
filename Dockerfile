@@ -7,6 +7,7 @@ WORKDIR /usr/src/app
 
 RUN apt-get -qy update && apt-get -qy install openssl
 RUN yarn install
+RUN yarn add express
 
 COPY . .
 
