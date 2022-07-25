@@ -24,7 +24,11 @@ app.use(express_1.default.urlencoded({ extended: true }));
 //     optionsSuccessStatus: 200
 // }))
 const prisma = new client_1.PrismaClient();
-app.listen(3000, () => {
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 3000;
+}
+app.listen(port, () => {
     console.log(`Start on port 3000.`);
 });
 app.get('/', (req, res) => {
