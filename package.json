@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node ./dist/app.js",
+    "start": "prisma ggenerate; node ./dist/app.js",
     "startDev": "nodemon ./dist/app.js",
     "build": "npx tsc",
     "build:watch": "npx tsc -w",
