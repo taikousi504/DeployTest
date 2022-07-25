@@ -7,7 +7,7 @@
     "startDev": "nodemon ./dist/app.js",
     "build": "npx tsc",
     "build:watch": "npx tsc -w",
-    "dev": "yarn run build:watch & yarn start",
+    "dev": "yarn run build:watch & yarn startDev",
     "heroku-postbuild": "yarn add -D"
   },
   "devDependencies": {
@@ -17,16 +17,15 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
-    "nodemon": "^2.0.19",
+    "cors": "^2.8.5",
     "express": "^4.18.1",
-    "express-session": "1.14.2",
+    "nodemon": "^2.0.19",
     "prisma": "^4.0.0",
     "ts-node": "^10.8.2",
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "@prisma/client": "4.0.0",
-    "express-session": "1.14.2"
+    "@prisma/client": "4.0.0"
   },
   "engines": {
     "node": "16.x"
